@@ -13,10 +13,10 @@ namespace cis237inclass5
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CarsTestEntities : DbContext
+    public partial class CarsAMahlerEntities : DbContext
     {
-        public CarsTestEntities()
-            : base("name=CarsTestEntities")
+        public CarsAMahlerEntities()
+            : base("name=CarsAMahlerEntities")
         {
         }
     

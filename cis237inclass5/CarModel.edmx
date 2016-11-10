@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CarsTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CarsAMahlerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cars">
           <Key>
             <PropertyRef Name="id" />
@@ -17,14 +17,14 @@
           <Property Name="horsepower" Type="int" Nullable="false" />
           <Property Name="cylinders" Type="int" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="CarsTestModelStoreContainer">
+        <EntityContainer Name="CarsAMahlerModelStoreContainer">
           <EntitySet Name="Cars" EntityType="Self.Cars" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="CarsTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="CarsAMahlerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Car">
           <Key>
             <PropertyRef Name="id" />
@@ -37,7 +37,7 @@
           <Property Name="horsepower" Type="Int32" Nullable="false" />
           <Property Name="cylinders" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="CarsTestEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CarsAMahlerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Cars" EntityType="Self.Car" />
         </EntityContainer>
       </Schema>
@@ -45,9 +45,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CarsTestModelStoreContainer" CdmEntityContainer="CarsTestEntities">
+        <EntityContainerMapping StorageEntityContainer="CarsAMahlerModelStoreContainer" CdmEntityContainer="CarsAMahlerEntities">
           <EntitySetMapping Name="Cars">
-            <EntityTypeMapping TypeName="CarsTestModel.Car">
+            <EntityTypeMapping TypeName="CarsAMahlerModel.Car">
               <MappingFragment StoreEntitySet="Cars">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="year" ColumnName="year" />
